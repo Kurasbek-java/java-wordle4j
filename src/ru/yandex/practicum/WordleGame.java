@@ -105,7 +105,7 @@ public class WordleGame {
         if (available.isEmpty()) return null;
 
         Collections.shuffle(available);
-        String suggestion = available.get(0);
+        String suggestion = available.getFirst();
         usedHints.add(suggestion);
         return suggestion;
     }
@@ -155,9 +155,5 @@ public class WordleGame {
 
     public List<String> getHints() {
         return Collections.unmodifiableList(hints);
-    }
-
-    public List<String> getCandidates() {
-        return Collections.unmodifiableList(candidates);
     }
 }

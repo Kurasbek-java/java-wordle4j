@@ -29,7 +29,7 @@ public class Wordle {
     }
 
     static void playGame(WordleGame game, Scanner scanner, PrintWriter log) {
-        printWelcome(game);
+        printWelcome();
 
         while (!game.isFinished()) {
             System.out.printf("%nПопыток осталось: %d%n", game.getAttemptsLeft());
@@ -73,7 +73,7 @@ public class Wordle {
         log.flush();
     }
 
-    private static void printWelcome(WordleGame game) {
+    private static void printWelcome() {
         System.out.println("Угадайте слово из 5 букв за " + WordleGame.MAX_ATTEMPTS + " попыток.");
         System.out.println("Подсказки: + = верная буква и позиция");
         System.out.println("           ^ = буква есть, но не на этом месте");
